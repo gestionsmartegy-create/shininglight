@@ -28,11 +28,12 @@
     .hero p{max-width:680px;font-size:19px;line-height:1.6;color:#ddd3cd}.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}.proof{display:flex;gap:28px;flex-wrap:wrap;margin-top:48px;padding-top:26px;border-top:1px solid var(--line)}.proof strong{display:block;font-size:28px}.proof span{font-size:13px;color:var(--muted)}
     section{padding:110px 0}.intro{background:#f5efea;color:#171412}.intro-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center}.section-title{font-size:clamp(50px,7vw,92px)}.intro p,.bodycopy{font-size:18px;line-height:1.7;color:#514943}.quote{border-left:4px solid var(--coral);padding:16px 0 16px 28px;font-size:28px;line-height:1.25;font-weight:800;margin:32px 0}.portrait-card{position:relative}.portrait-card img{width:100%;height:610px;object-fit:cover;object-position:52% 30%;border-radius:34px;filter:saturate(.85)}.portrait-card:after{content:"Sciences  •  Mode  •  Bienfaisance";position:absolute;left:-26px;bottom:36px;background:#111;color:#fff;padding:18px 24px;border-radius:0 18px 18px 0;font-weight:800;letter-spacing:.04em}
     .pillars{background:#0c0c0c}.pillar-head{display:flex;justify-content:space-between;gap:50px;align-items:end;margin-bottom:46px}.pillar-head p{max-width:470px;color:var(--muted);line-height:1.7}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.card{min-height:520px;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;position:relative;background:#161616}.card img{width:100%;height:100%;object-fit:cover;opacity:.52;transition:.4s}.card:hover img{transform:scale(1.04);opacity:.66}.card-overlay{position:absolute;inset:0;padding:30px;display:flex;flex-direction:column;justify-content:flex-end;background:linear-gradient(180deg,transparent 20%,rgba(0,0,0,.92) 92%)}.card-num{position:absolute;top:24px;right:24px;color:var(--coral);font-size:13px;font-weight:900;letter-spacing:.14em}.card h3{font-family:var(--display);font-size:54px;line-height:.9;text-transform:uppercase;margin:0 0 15px}.card p{color:#d6cfca;line-height:1.55}.card-link{margin-top:14px;color:var(--coral);font-weight:800}
+    .galerie{background:#0b0b0b}.galerie-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:46px}.galerie-grid img{width:100%;height:340px;object-fit:cover;border-radius:22px;transition:.35s}.galerie-grid img:hover{transform:scale(1.02)}.galerie-grid img:first-child{grid-column:1/-1;height:520px}
     .conversion{background:linear-gradient(135deg,#8b3038,#c2633f 52%,#f18f73);color:#111}.conversion-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center}.conversion .section-title{margin-top:0}.steps{display:grid;gap:14px}.step{background:rgba(255,255,255,.86);border-radius:20px;padding:20px;display:flex;gap:16px;align-items:flex-start}.step b{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:#111;color:#fff;flex:0 0 auto}.step h4{margin:2px 0 7px;font-size:18px}.step p{margin:0;color:#5f514b;line-height:1.5}
     .impact{background:#f5efea;color:#181412}.impact-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:70px;align-items:center}.impact img{border-radius:30px;height:560px;width:100%;object-fit:cover}.metrics{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:30px}.metric{border:1px solid #d9cec7;border-radius:18px;padding:22px}.metric strong{font-size:38px;display:block;color:var(--brick)}.metric span{color:#665d58}
     .cta{padding:100px 0;background:#0d0d0d;text-align:center}.cta-box{border:1px solid var(--line);border-radius:36px;padding:74px 34px;background:radial-gradient(circle at top right,rgba(241,143,115,.25),transparent 35%),#111}.cta h2{font-family:var(--display);font-size:clamp(52px,8vw,102px);line-height:.9;text-transform:uppercase;margin:0 auto 22px;max-width:950px}.cta p{max-width:720px;margin:0 auto 28px;color:#c8bfba;font-size:18px;line-height:1.6}
     footer{border-top:1px solid var(--line);padding:34px 0;color:#aaa19c}.footer-grid{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}.footer-links{display:flex;gap:20px;flex-wrap:wrap}
-    @media(max-width:900px){.links{display:none}.intro-grid,.conversion-grid,.impact-grid{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.card{min-height:460px}.pillar-head{display:block}.hero:before{background:linear-gradient(180deg,rgba(9,9,9,.2),#090909 78%),url('assets/hero-claire.jpg') 58% top/cover no-repeat}.hero{min-height:820px}.hero-content{padding-top:310px}.portrait-card img{height:520px}.impact img{height:460px}}
+    @media(max-width:900px){.links{display:none}.intro-grid,.conversion-grid,.impact-grid{grid-template-columns:1fr}.galerie-grid{grid-template-columns:1fr}.galerie-grid img{height:260px}.galerie-grid img:first-child{height:320px}.cards{grid-template-columns:1fr}.card{min-height:460px}.pillar-head{display:block}.hero:before{background:linear-gradient(180deg,rgba(9,9,9,.2),#090909 78%),url('assets/hero-claire.jpg') 58% top/cover no-repeat}.hero{min-height:820px}.hero-content{padding-top:310px}.portrait-card img{height:520px}.impact img{height:460px}}
     @media(max-width:560px){.wrap{width:min(100% - 24px,1180px)}.nav-inner{height:72px}.brand span{display:none}.nav .btn{padding:12px 15px}.hero h1{font-size:60px}.hero p{font-size:17px}.proof{gap:16px}.proof>div{width:45%}section{padding:78px 0}.section-title{font-size:54px}.metrics{grid-template-columns:1fr}.portrait-card:after{left:0;font-size:13px}.cta-box{padding:54px 20px}}
   </style>
 </head>
@@ -40,8 +41,8 @@
   <header class="nav">
     <div class="wrap nav-inner">
       <a class="brand" href="#accueil"><img src="assets/logo-charity.png" alt="Logo Shining Light"><span>SHINING LIGHT</span></a>
-      <nav class="links" aria-label="Navigation principale"><a href="#mission">Mission</a><a href="#univers">Nos univers</a><a href="#impact">Impact</a><a href="#fondatrice">Fondatrice</a></nav>
-      <a class="btn btn-primary" href="#candidature">Rejoindre Shining Light</a>
+      <nav class="links" aria-label="Navigation principale"><a href="#univers">Nos univers</a><a href="#activites">Activités</a><a href="#impact">Impact</a><a href="#fondatrice">Fondatrice</a></nav>
+      <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfPkRSQ-3T3SOp2gfeFVIa2TKzZNlc6AAbeVFjM4z_OP5ahzw/viewform" target="_blank" rel="noopener">Rejoindre Shining Light</a>
     </div>
   </header>
 
@@ -51,7 +52,7 @@
         <div class="eyebrow">Modeling · Talent · Charity</div>
         <h1>Révéler le talent.<br><span>Éclairer des vies.</span></h1>
         <p>Shining Light transforme la mode en plateforme de confiance, de discipline et d’impact. Nous accompagnons les talents, créons des expériences professionnelles et redonnons à la communauté.</p>
-        <div class="actions"><a class="btn btn-primary" href="#candidature">Déposer une candidature</a><a class="btn btn-ghost" href="#univers">Découvrir notre mission</a></div>
+        <div class="actions"><a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfPkRSQ-3T3SOp2gfeFVIa2TKzZNlc6AAbeVFjM4z_OP5ahzw/viewform" target="_blank" rel="noopener">Déposer une candidature</a><a class="btn btn-ghost" href="#univers">Découvrir notre mission</a></div>
         <div class="proof"><div><strong>2019–2025</strong><span>Projets internationaux</span></div><div><strong>3 piliers</strong><span>Mode, talent, bienfaisance</span></div><div><strong>Montréal · Dakar · Kinshasa</strong><span>Une présence tournée vers le monde</span></div></div>
       </div>
     </section>
@@ -80,9 +81,22 @@
       </div>
     </section>
 
+    <section class="galerie" id="activites">
+      <div class="wrap">
+        <div class="eyebrow">Sur le terrain</div>
+        <h2 class="section-title">Nos activités en images</h2>
+        <p style="max-width:560px;color:var(--muted);line-height:1.7;margin:0">Ateliers de danse, répétitions et moments partagés : un aperçu de l’énergie qui anime la communauté Shining Light.</p>
+        <div class="galerie-grid">
+          <img src="assets/activite-01.jpg" alt="Atelier de danse Shining Light — moment collectif, bras levés">
+          <img src="assets/activite-02.jpg" alt="Participants en plein apprentissage d’une chorégraphie">
+          <img src="assets/activite-03.jpg" alt="Groupe de jeunes dansant ensemble en studio">
+        </div>
+      </div>
+    </section>
+
     <section class="conversion" id="candidature">
       <div class="wrap conversion-grid">
-        <div><div class="eyebrow" style="color:#171412">Votre prochaine étape</div><h2 class="section-title">Votre lumière mérite une vraie plateforme.</h2><p style="font-size:19px;line-height:1.65;max-width:680px">Vous souhaitez devenir mannequin, inscrire un jeune à un atelier, proposer un partenariat ou soutenir une action caritative? Commencez par nous parler de votre projet.</p><div class="actions"><a class="btn" style="background:#111;color:#fff" href="mailto:info@shininglightmodeling.com">Commencer maintenant</a><a class="btn" style="border-color:#111" href="https://www.instagram.com/shininglightm/">Nous suivre sur Instagram</a></div></div>
+        <div><div class="eyebrow" style="color:#171412">Votre prochaine étape</div><h2 class="section-title">Votre lumière mérite une vraie plateforme.</h2><p style="font-size:19px;line-height:1.65;max-width:680px">Vous souhaitez devenir mannequin, inscrire un jeune à un atelier, proposer un partenariat ou soutenir une action caritative? Commencez par nous parler de votre projet.</p><div class="actions"><a class="btn" style="background:#111;color:#fff" href="https://docs.google.com/forms/d/e/1FAIpQLSfPkRSQ-3T3SOp2gfeFVIa2TKzZNlc6AAbeVFjM4z_OP5ahzw/viewform" target="_blank" rel="noopener">Commencer maintenant</a><a class="btn" style="border-color:#111" href="https://www.instagram.com/shininglightm/">Nous suivre sur Instagram</a></div></div>
         <div class="steps"><div class="step"><b>1</b><div><h4>Choisissez votre parcours</h4><p>Modeling, Talent, Charity ou partenariat.</p></div></div><div class="step"><b>2</b><div><h4>Présentez votre objectif</h4><p>Expliquez-nous ce que vous souhaitez développer ou soutenir.</p></div></div><div class="step"><b>3</b><div><h4>Recevez une orientation claire</h4><p>Notre équipe vous dirige vers le programme ou la collaboration adaptée.</p></div></div></div>
       </div>
     </section>
