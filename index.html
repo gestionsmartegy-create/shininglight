@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Shining Light révèle les talents, forme les mannequins et transforme la réussite en impact social durable." />
+  <title>Shining Light — Mode, Talent et Impact</title>
+  <style>
+    :root{
+      --black:#090909; --ink:#151515; --white:#f8f5f2; --muted:#b9b1ac;
+      --coral:#f18f73; --peach:#f5ad91; --brick:#92333a; --orange:#c2633f;
+      --line:rgba(255,255,255,.14); --radius:26px;
+      --display: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      --body: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--black);color:var(--white);font-family:var(--body)}
+    a{color:inherit;text-decoration:none} img{display:block;max-width:100%}
+    .wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+    .nav{position:fixed;z-index:50;top:0;left:0;right:0;background:linear-gradient(180deg,rgba(5,5,5,.95),rgba(5,5,5,.58),transparent);backdrop-filter:blur(8px)}
+    .nav-inner{height:88px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+    .brand{display:flex;align-items:center;gap:12px;font-family:Georgia,serif;letter-spacing:.08em;font-size:18px}.brand img{width:46px;height:46px;object-fit:cover;object-position:50% 28%;border-radius:14px}
+    .links{display:flex;gap:26px;font-size:14px;color:#ded7d2}.links a:hover{color:#fff}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 22px;border-radius:999px;border:1px solid transparent;font-weight:800;transition:.25s ease}.btn-primary{background:var(--coral);color:#131313}.btn-primary:hover{transform:translateY(-2px);background:#ff9d80}.btn-ghost{border-color:rgba(255,255,255,.28)}
+    .hero{min-height:760px;display:grid;align-items:end;position:relative;overflow:hidden;padding:135px 0 72px}
+    .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#090909 0%,#090909 42%,rgba(9,9,9,.46) 72%,rgba(9,9,9,.16)),url('assets/hero-claire.jpg') center right/cover no-repeat;filter:saturate(.85)}
+    .hero:after{content:"";position:absolute;width:460px;height:460px;border-radius:50%;background:radial-gradient(circle,var(--brick),transparent 68%);filter:blur(55px);opacity:.28;left:-180px;bottom:-160px}
+    .hero-content{position:relative;z-index:2;max-width:760px}.eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:12px;color:var(--coral);font-weight:900}.hero h1,.section-title{font-family:var(--display);text-transform:uppercase;line-height:.9;letter-spacing:-.035em;margin:18px 0}.hero h1{font-size:clamp(64px,9vw,128px);max-width:900px}.hero h1 span{color:var(--coral)}
+    .hero p{max-width:680px;font-size:19px;line-height:1.6;color:#ddd3cd}.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}.proof{display:flex;gap:28px;flex-wrap:wrap;margin-top:48px;padding-top:26px;border-top:1px solid var(--line)}.proof strong{display:block;font-size:28px}.proof span{font-size:13px;color:var(--muted)}
+    section{padding:110px 0}.intro{background:#f5efea;color:#171412}.intro-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center}.section-title{font-size:clamp(50px,7vw,92px)}.intro p,.bodycopy{font-size:18px;line-height:1.7;color:#514943}.quote{border-left:4px solid var(--coral);padding:16px 0 16px 28px;font-size:28px;line-height:1.25;font-weight:800;margin:32px 0}.portrait-card{position:relative}.portrait-card img{width:100%;height:610px;object-fit:cover;object-position:52% 30%;border-radius:34px;filter:saturate(.85)}.portrait-card:after{content:"Sciences  •  Mode  •  Bienfaisance";position:absolute;left:-26px;bottom:36px;background:#111;color:#fff;padding:18px 24px;border-radius:0 18px 18px 0;font-weight:800;letter-spacing:.04em}
+    .pillars{background:#0c0c0c}.pillar-head{display:flex;justify-content:space-between;gap:50px;align-items:end;margin-bottom:46px}.pillar-head p{max-width:470px;color:var(--muted);line-height:1.7}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.card{min-height:520px;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;position:relative;background:#161616}.card img{width:100%;height:100%;object-fit:cover;opacity:.52;transition:.4s}.card:hover img{transform:scale(1.04);opacity:.66}.card-overlay{position:absolute;inset:0;padding:30px;display:flex;flex-direction:column;justify-content:flex-end;background:linear-gradient(180deg,transparent 20%,rgba(0,0,0,.92) 92%)}.card-num{position:absolute;top:24px;right:24px;color:var(--coral);font-size:13px;font-weight:900;letter-spacing:.14em}.card h3{font-family:var(--display);font-size:54px;line-height:.9;text-transform:uppercase;margin:0 0 15px}.card p{color:#d6cfca;line-height:1.55}.card-link{margin-top:14px;color:var(--coral);font-weight:800}
+    .conversion{background:linear-gradient(135deg,#8b3038,#c2633f 52%,#f18f73);color:#111}.conversion-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center}.conversion .section-title{margin-top:0}.steps{display:grid;gap:14px}.step{background:rgba(255,255,255,.86);border-radius:20px;padding:20px;display:flex;gap:16px;align-items:flex-start}.step b{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:#111;color:#fff;flex:0 0 auto}.step h4{margin:2px 0 7px;font-size:18px}.step p{margin:0;color:#5f514b;line-height:1.5}
+    .impact{background:#f5efea;color:#181412}.impact-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:70px;align-items:center}.impact img{border-radius:30px;height:560px;width:100%;object-fit:cover}.metrics{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:30px}.metric{border:1px solid #d9cec7;border-radius:18px;padding:22px}.metric strong{font-size:38px;display:block;color:var(--brick)}.metric span{color:#665d58}
+    .cta{padding:100px 0;background:#0d0d0d;text-align:center}.cta-box{border:1px solid var(--line);border-radius:36px;padding:74px 34px;background:radial-gradient(circle at top right,rgba(241,143,115,.25),transparent 35%),#111}.cta h2{font-family:var(--display);font-size:clamp(52px,8vw,102px);line-height:.9;text-transform:uppercase;margin:0 auto 22px;max-width:950px}.cta p{max-width:720px;margin:0 auto 28px;color:#c8bfba;font-size:18px;line-height:1.6}
+    footer{border-top:1px solid var(--line);padding:34px 0;color:#aaa19c}.footer-grid{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}.footer-links{display:flex;gap:20px;flex-wrap:wrap}
+    @media(max-width:900px){.links{display:none}.intro-grid,.conversion-grid,.impact-grid{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.card{min-height:460px}.pillar-head{display:block}.hero:before{background:linear-gradient(180deg,rgba(9,9,9,.2),#090909 78%),url('assets/hero-claire.jpg') 58% top/cover no-repeat}.hero{min-height:820px}.hero-content{padding-top:310px}.portrait-card img{height:520px}.impact img{height:460px}}
+    @media(max-width:560px){.wrap{width:min(100% - 24px,1180px)}.nav-inner{height:72px}.brand span{display:none}.nav .btn{padding:12px 15px}.hero h1{font-size:60px}.hero p{font-size:17px}.proof{gap:16px}.proof>div{width:45%}section{padding:78px 0}.section-title{font-size:54px}.metrics{grid-template-columns:1fr}.portrait-card:after{left:0;font-size:13px}.cta-box{padding:54px 20px}}
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#accueil"><img src="assets/logo-charity.png" alt="Logo Shining Light"><span>SHINING LIGHT</span></a>
+      <nav class="links" aria-label="Navigation principale"><a href="#mission">Mission</a><a href="#univers">Nos univers</a><a href="#impact">Impact</a><a href="#fondatrice">Fondatrice</a></nav>
+      <a class="btn btn-primary" href="#candidature">Rejoindre Shining Light</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="accueil">
+      <div class="wrap hero-content">
+        <div class="eyebrow">Modeling · Talent · Charity</div>
+        <h1>Révéler le talent.<br><span>Éclairer des vies.</span></h1>
+        <p>Shining Light transforme la mode en plateforme de confiance, de discipline et d’impact. Nous accompagnons les talents, créons des expériences professionnelles et redonnons à la communauté.</p>
+        <div class="actions"><a class="btn btn-primary" href="#candidature">Déposer une candidature</a><a class="btn btn-ghost" href="#univers">Découvrir notre mission</a></div>
+        <div class="proof"><div><strong>2019–2025</strong><span>Projets internationaux</span></div><div><strong>3 piliers</strong><span>Mode, talent, bienfaisance</span></div><div><strong>Montréal · Dakar · Kinshasa</strong><span>Une présence tournée vers le monde</span></div></div>
+      </div>
+    </section>
+
+    <section class="intro" id="fondatrice">
+      <div class="wrap intro-grid">
+        <div>
+          <div class="eyebrow">Une vision singulière</div>
+          <h2 class="section-title">Entre sciences, mode et bienfaisance</h2>
+          <p>Fondée en 2020 par Claire Simada Aeschimann, Shining Light est née d’une conviction simple : le talent doit pouvoir grandir dans un environnement où la dignité, le respect et l’inclusion ne sont jamais négociables.</p>
+          <div class="quote">« Briller, ce n’est pas seulement se révéler au monde. C’est aussi éclairer le chemin des autres. »</div>
+          <p class="bodycopy">Issue de la médecine expérimentale et de la biotechnologie, mannequin professionnelle et décoratrice d’intérieur, Claire unit rigueur, créativité et engagement social pour construire une plateforme qui donne aux jeunes les moyens de croire en leur potentiel.</p>
+        </div>
+        <div class="portrait-card"><img src="assets/founder-portrait.jpg" alt="Portrait de la fondatrice de Shining Light"></div>
+      </div>
+    </section>
+
+    <section class="pillars" id="univers">
+      <div class="wrap">
+        <div class="pillar-head"><div><div class="eyebrow">Trois univers, une seule mission</div><h2 class="section-title">Faire grandir le talent avec sens</h2></div><p>Chaque univers répond à un besoin concret : professionnaliser les mannequins, éveiller les talents artistiques et transformer la réussite en actions utiles.</p></div>
+        <div class="cards">
+          <article class="card"><img src="assets/modeling-grid.jpg" alt="Défilés et formations de mannequins"><span class="card-num">01 / MODELING</span><div class="card-overlay"><h3>Modeling</h3><p>Formations, castings, défilés et expériences professionnelles pour développer présence, confiance et discipline.</p><a class="card-link" href="#candidature">Je veux devenir mannequin →</a></div></article>
+          <article class="card"><img src="assets/talent-workshop.jpg" alt="Atelier artistique Shining Light Talent"><span class="card-num">02 / TALENT</span><div class="card-overlay"><h3>Talent</h3><p>Danse, scène et expression corporelle pour aider les jeunes à se révéler, se construire et s’affirmer.</p><a class="card-link" href="#candidature">Découvrir les ateliers →</a></div></article>
+          <article class="card"><img src="assets/charity-grid.jpg" alt="Actions communautaires Shining Light Charity"><span class="card-num">03 / CHARITY</span><div class="card-overlay"><h3>Charity</h3><p>Des actions concrètes pour soutenir les enfants, prévenir les traumatismes et créer des perspectives durables.</p><a class="card-link" href="#candidature">Soutenir une initiative →</a></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="conversion" id="candidature">
+      <div class="wrap conversion-grid">
+        <div><div class="eyebrow" style="color:#171412">Votre prochaine étape</div><h2 class="section-title">Votre lumière mérite une vraie plateforme.</h2><p style="font-size:19px;line-height:1.65;max-width:680px">Vous souhaitez devenir mannequin, inscrire un jeune à un atelier, proposer un partenariat ou soutenir une action caritative? Commencez par nous parler de votre projet.</p><div class="actions"><a class="btn" style="background:#111;color:#fff" href="mailto:info@shininglightmodeling.com">Commencer maintenant</a><a class="btn" style="border-color:#111" href="https://www.instagram.com/shininglightm/">Nous suivre sur Instagram</a></div></div>
+        <div class="steps"><div class="step"><b>1</b><div><h4>Choisissez votre parcours</h4><p>Modeling, Talent, Charity ou partenariat.</p></div></div><div class="step"><b>2</b><div><h4>Présentez votre objectif</h4><p>Expliquez-nous ce que vous souhaitez développer ou soutenir.</p></div></div><div class="step"><b>3</b><div><h4>Recevez une orientation claire</h4><p>Notre équipe vous dirige vers le programme ou la collaboration adaptée.</p></div></div></div>
+      </div>
+    </section>
+
+    <section class="impact" id="impact">
+      <div class="wrap impact-grid">
+        <img src="assets/charity-grid.jpg" alt="Actions de Shining Light auprès des enfants et des communautés">
+        <div><div class="eyebrow">Une empreinte mesurable</div><h2 class="section-title">La réussite prend tout son sens lorsqu’elle se partage.</h2><p class="bodycopy">De Dakar à Kinshasa, Shining Light agit auprès des enfants et des jeunes à travers des ateliers, de l’accompagnement, des dons et des initiatives éducatives et artistiques. Chaque projet vise à restaurer la confiance et à ouvrir de nouvelles perspectives.</p><div class="metrics"><div class="metric"><strong>6+</strong><span>années d’initiatives</span></div><div class="metric"><strong>3</strong><span>villes d’action majeures</span></div><div class="metric"><strong>Mode + Arts</strong><span>comme leviers d’inclusion</span></div><div class="metric"><strong>1 mission</strong><span>dignité, confiance et impact</span></div></div></div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="wrap cta-box"><div class="eyebrow">Candidatures · Partenariats · Dons</div><h2>Faites partie de la prochaine histoire.</h2><p>Rejoignez une communauté qui ne se contente pas de mettre les talents en lumière : elle les prépare, les protège et leur donne les moyens d’avoir un impact.</p><a class="btn btn-primary" href="mailto:info@shininglightmodeling.com">Contacter Shining Light</a></div>
+    </section>
+  </main>
+
+  <footer><div class="wrap footer-grid"><div>© 2026 Shining Light. Tous droits réservés.</div><div class="footer-links"><a href="mailto:info@shininglightmodeling.com">info@shininglightmodeling.com</a><a href="tel:+17058819930">+1 (705) 881-9930</a><a href="https://www.instagram.com/shininglightm/">Instagram</a></div></div></footer>
+</body>
+</html>
