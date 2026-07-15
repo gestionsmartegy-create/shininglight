@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Join Shining Light: model application, Talent workshop enrollment, Charity support or partnership." />
+  <title>Join Shining Light — Application</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="index.html"><img src="../assets/logo-embleme.jpg" alt="Shining Light logo"><span>SHINING LIGHT</span></a>
+      <nav class="links" aria-label="Main navigation"><a href="modeling.html">Modeling</a><a href="talent.html">Talent</a><a href="charity.html">Charity</a><a href="index.html#activites">Gallery</a><a href="index.html#fondatrice">Founder</a><a class="lang" href="../inscription.html" lang="fr" hreflang="fr">FR</a></nav>
+      <a class="btn btn-primary" href="apply.html">Join Shining Light</a>
+    </div>
+  </header>
+
+  <main>
+    <section style="padding-top:170px">
+      <div class="wrap form-wrap">
+        <div class="eyebrow">Applications · Workshops · Partnerships · Donations</div>
+        <h1 class="section-title">Join Shining Light</h1>
+        <p style="color:var(--muted);line-height:1.7;max-width:640px">Fill out this form — no account required — and our team will get back to you with clear guidance toward the right program or collaboration.</p>
+
+        <form class="form-card" id="apply-form" style="margin-top:34px">
+          <div class="form-grid">
+            <div class="field"><label for="f-nom">Full name *</label><input id="f-nom" name="name" required autocomplete="name"></div>
+            <div class="field"><label for="f-email">Email *</label><input id="f-email" type="email" name="email" required autocomplete="email"></div>
+            <div class="field"><label for="f-tel">Phone / WhatsApp</label><input id="f-tel" type="tel" name="phone" autocomplete="tel"></div>
+            <div class="field"><label for="f-ville">City &amp; country *</label><input id="f-ville" name="city" required placeholder="E.g. Dakar, Senegal"></div>
+            <div class="field"><label for="f-parcours">Chosen path *</label>
+              <select id="f-parcours" name="path" required>
+                <option value="" disabled selected>Choose…</option>
+                <option>Modeling — become a model</option>
+                <option>Talent — dance / stage workshops</option>
+                <option>Charity — volunteering or donation</option>
+                <option>Partnership / sponsoring</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field"><label for="f-age">Age (if applying)</label><input id="f-age" name="age" inputmode="numeric"></div>
+            <div class="field full"><label for="f-msg">Your goal *</label><textarea id="f-msg" name="message" rows="5" required placeholder="Tell us about yourself, your project, or what you would like to support."></textarea></div>
+          </div>
+          <div class="actions"><button class="btn btn-primary" type="submit" id="apply-submit">Send my request</button></div>
+          <p class="form-status" id="apply-status" role="status"></p>
+          <p class="form-note">Your information is sent directly by email to the Shining Light team (info@shininglightmodeling.com). No account or sign-in required.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap footer-grid"><div>© 2026 Shining Light. All rights reserved.</div><div class="footer-links"><a href="mailto:info@shininglightmodeling.com">info@shininglightmodeling.com</a><a href="tel:+17058819930">+1 (705) 881-9930</a><a href="https://www.instagram.com/shininglightm/" target="_blank" rel="noopener">Instagram</a><a href="https://youtube.com/@shininglightcharityy" target="_blank" rel="noopener">YouTube</a></div></div></footer>
+
+  <script>
+  // Sends the request by email via FormSubmit (https://formsubmit.co), no backend needed.
+  const APPLY_EMAIL = "info@shininglightmodeling.com";
+  document.getElementById("apply-form").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const form = e.target, btn = document.getElementById("apply-submit"), st = document.getElementById("apply-status");
+    const data = Object.fromEntries(new FormData(form).entries());
+    data._subject = "New request — Shining Light website (" + (data.path || "no path") + ")";
+    data._template = "table";
+    btn.disabled = true; btn.textContent = "Sending…"; st.className = "form-status";
+    try {
+      const res = await fetch("https://formsubmit.co/ajax/" + APPLY_EMAIL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify(data)
+      });
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      st.textContent = "Thank you! Your request has been sent. Our team will get back to you shortly.";
+      st.className = "form-status ok";
+      form.reset();
+    } catch (err) {
+      st.innerHTML = "Automatic sending failed. Please write to us directly at <a href='mailto:" + APPLY_EMAIL + "' style='color:var(--coral)'>" + APPLY_EMAIL + "</a>.";
+      st.className = "form-status err";
+    } finally {
+      btn.disabled = false; btn.textContent = "Send my request";
+    }
+  });
+  </script>
+</body>
+</html>
