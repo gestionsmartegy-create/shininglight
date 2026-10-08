@@ -127,3 +127,60 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:#aaa19c}.footer-gri
   .partners-grid{grid-template-columns:repeat(2,1fr)}
   .team-grid{grid-template-columns:repeat(2,1fr)}.team-country h3{font-size:28px}
 }
+
+
+/* Motion — subtle entrance, depth and hover movement */
+@keyframes slFadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+@keyframes slHeroZoom{from{transform:scale(1.02)}to{transform:scale(1.08)}}
+@keyframes slFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+
+@media (prefers-reduced-motion:no-preference){
+  .hero:before{animation:slHeroZoom 16s ease-in-out infinite alternate}
+  .hero-content>*{opacity:0;animation:slFadeUp .8s cubic-bezier(.22,1,.36,1) forwards}
+  .hero-content .eyebrow{animation-delay:.1s}
+  .hero-content h1{animation-delay:.2s}
+  .hero-content p{animation-delay:.32s}
+  .hero-content .actions{animation-delay:.44s}
+  .hero-content .proof{animation-delay:.56s}
+
+  section:not(.hero) .eyebrow,
+  section:not(.hero) .section-title,
+  section:not(.hero) .pillar-head>p,
+  section:not(.hero) .bodycopy,
+  section:not(.hero) .quote,
+  section:not(.hero) .parcours,
+  section:not(.hero) .cards,
+  section:not(.hero) .galerie-grid,
+  section:not(.hero) .videos-grid,
+  section:not(.hero) .steps,
+  section:not(.hero) .metrics,
+  section:not(.hero) .team-country,
+  section:not(.hero) .partners-grid,
+  section:not(.hero) .cta-box{
+    animation:slFadeUp .75s cubic-bezier(.22,1,.36,1) both;
+  }
+
+  .card{transition:transform .45s cubic-bezier(.22,1,.36,1),border-color .3s ease,box-shadow .45s ease}
+  .card:hover{transform:translateY(-10px);box-shadow:0 24px 55px rgba(0,0,0,.28);border-color:rgba(241,143,115,.45)}
+  .gitem{transition:transform .45s cubic-bezier(.22,1,.36,1),box-shadow .45s ease}
+  .gitem:hover{transform:translateY(-7px);box-shadow:0 18px 38px rgba(0,0,0,.28)}
+  .video-card{transition:transform .4s ease,box-shadow .4s ease}
+  .video-card:hover{transform:translateY(-7px);box-shadow:0 18px 38px rgba(0,0,0,.24)}
+  .step{transition:transform .35s ease,box-shadow .35s ease}
+  .step:hover{transform:translateX(7px);box-shadow:0 12px 28px rgba(0,0,0,.16)}
+  .metric{transition:transform .35s ease,background .35s ease}
+  .metric:hover{transform:translateY(-5px);background:rgba(255,255,255,.55)}
+  .member{transition:transform .35s ease,border-color .35s ease}
+  .member:hover{transform:translateY(-7px);border-color:rgba(241,143,115,.45)}
+  .member .avatar{transition:transform .4s ease}
+  .member:hover .avatar{transform:scale(1.08)}
+  .partners-grid img{transition:transform .35s ease,box-shadow .35s ease}
+  .partners-grid img:hover{transform:translateY(-6px) scale(1.02);box-shadow:0 16px 34px rgba(20,10,5,.16)}
+  .portrait-card{animation:slFloat 6s ease-in-out infinite}
+  .btn{will-change:transform}
+}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
